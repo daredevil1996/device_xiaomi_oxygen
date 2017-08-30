@@ -99,6 +99,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
+#low audio flinger standby delay to reduce power consumption
+ro.audio.flinger_standbytime_ms=300
+
 # GPS
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
