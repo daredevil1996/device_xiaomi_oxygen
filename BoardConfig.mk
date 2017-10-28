@@ -203,7 +203,11 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 TARGET_RIL_VARIANT := caf
 
 # Recovery
+<<<<<<< HEAD
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
+=======
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery/fstab.qcom
+>>>>>>> 7be802e... mido: update rootdir from caf
 
 # Sensor
 USE_SENSOR_MULTI_HAL := true
