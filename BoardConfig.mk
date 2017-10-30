@@ -16,6 +16,7 @@
 
 DEVICE_PATH := device/xiaomi/oxygen
 
+
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Architecture
@@ -203,7 +204,7 @@ BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
 TARGET_RIL_VARIANT := caf
 
 # Recovery
-TRARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
