@@ -45,9 +45,12 @@ write_headers
 write_makefiles "$MY_DIR"/proprietary-files.txt
 echo "" >> "$PRODUCTMK"
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+<<<<<<< HEAD
 cat << EOF >> "$ANDROIDMK"
 
 EOF
+=======
+>>>>>>> 9c86de5... mido: Add seperate list for common qcom blobs
 
 # Finish
 write_footers
