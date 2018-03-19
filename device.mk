@@ -164,12 +164,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-<<<<<<< HEAD
-    fingerprintd \
-    fingerprint.msm8953
-=======
     android.hardware.biometrics.fingerprint@2.0-service
->>>>>>> 541f5db... mido: Add hidl packages and their dependency
 
 # FM
 PRODUCT_PACKAGES += \
