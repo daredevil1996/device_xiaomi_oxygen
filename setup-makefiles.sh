@@ -18,11 +18,7 @@
 
 set -e
 
-<<<<<<< HEAD
 DEVICE=oxygen
-=======
-DEVICE=mido
->>>>>>> 34d367d... mido: Update extract-files and setup-makefiles
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2017
@@ -49,13 +45,9 @@ write_headers
 write_makefiles "$MY_DIR"/proprietary-files.txt
 echo "" >> "$PRODUCTMK"
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
-
-<<<<<<< HEAD
-=======
 cat << EOF >> "$ANDROIDMK"
 
 EOF
 
->>>>>>> 34d367d... mido: Update extract-files and setup-makefiles
 # Finish
 write_footers
