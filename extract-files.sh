@@ -34,7 +34,7 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
-<<<<<<< HEAD
+
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
@@ -47,22 +47,7 @@ while [ "$1" != "" ]; do
                                 CLEAN_VENDOR=false
                                 ;;
         * )                     SRC=$1
-=======
-# default to not sanitizing the vendor folder before extraction
-clean_vendor=false
 
-while [ "$1" != "" ]; do
-    case $1 in
-        -p | --path )           shift
-                                SRC=$1
-                                ;;
-        -s | --section )        shift
-                                SECTION=$1
-                                clean_vendor=false
-                                ;;
-        -c | --clean-vendor )   clean_vendor=true
->>>>>>> 4813897... mido: Update to show usage for new extract_files features
-                                ;;
     esac
     shift
 done
@@ -72,15 +57,9 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-<<<<<<< HEAD
 setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
-=======
-setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT" false $clean_vendor
-
-extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
->>>>>>> 4813897... mido: Update to show usage for new extract_files features
 
 "$MY_DIR"/setup-makefiles.sh
