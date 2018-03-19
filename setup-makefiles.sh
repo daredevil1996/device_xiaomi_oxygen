@@ -43,6 +43,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt
+<<<<<<< HEAD
 echo "" >> "$PRODUCTMK"
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt
 <<<<<<< HEAD
@@ -51,6 +52,12 @@ cat << EOF >> "$ANDROIDMK"
 EOF
 =======
 >>>>>>> 9c86de5... mido: Add seperate list for common qcom blobs
+=======
+
+cat << EOF >> "$ANDROIDMK"
+
+EOF
+>>>>>>> parent of 9c86de5... mido: Add seperate list for common qcom blobs
 
 # Finish
 write_footers
