@@ -490,30 +490,15 @@ service hciattach /system//vendor/bin/hci_qcomm_init -e
     disabled
     oneshot
 
-<<<<<<< HEAD
-service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
-    class late_start
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-on property:bluetooth.hciattach=true
-    start hciattach
-=======
 on property:bluetooth.hciattach=true
     start hciattach
     setprop bluetooth.status on
->>>>>>> 7be802e... mido: update rootdir from caf
+
 
 on property:bluetooth.hciattach=false
     setprop bluetooth.status off
 
-<<<<<<< HEAD
-service netmgrd /system/bin/netmgrd
-=======
 service netmgrd /system/vendor/bin/netmgrd
->>>>>>> 7be802e... mido: update rootdir from caf
     class main
     writepid /dev/cpuset/system-background/tasks
 
@@ -636,13 +621,8 @@ service time_daemon /system/vendor/bin/time_daemon
     group root
     writepid /dev/cpuset/system-background/tasks
 
-<<<<<<< HEAD
-on property:vold.decrypt=trigger_restart_min_framework
-    start time_daemon
-
 on property:vold.decrypt=trigger_restart_framework
     restart time_daemon
-=======
 service gx_fpd /system/bin/gx_fpd
      class core
      user root
@@ -661,4 +641,3 @@ on property:sys.fp.onstart=1
    setprop goodix.fp.miui.token 0
    setprop ro.boot.fpsensor gdx
    setprop ro.hardware.fingerprint goodix
->>>>>>> 7be802e... mido: update rootdir from caf
