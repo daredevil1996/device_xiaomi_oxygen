@@ -686,7 +686,8 @@
 
     <path name="compress-offload-playback5 receiver">
         <ctl name="QUIN_MI2S_RX Audio Mixer MultiMedia12" value="1" />
-
+    </path>
+	
     <path name="compress-offload-playback5 speaker-and-bt-sco">
          <path name="compress-offload-playback5 bt-sco" />
          <path name="compress-offload-playback5" />
